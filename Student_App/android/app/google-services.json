@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "801081205988",
+    "project_id": "virtual-academy-8e1b7",
+    "storage_bucket": "virtual-academy-8e1b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801081205988:android:998593e3934fcaccfaf8f1",
+        "android_client_info": {
+          "package_name": "com.skillora"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801081205988-5b7sq8dp54jcup8r9iikt54oinih5ku2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skillora",
+            "certificate_hash": "952cc58a50c180a37e2751903ccce2f6b89aab54"
+          }
+        },
+        {
+          "client_id": "801081205988-0ipmt1pgvh88bluu3ain948t4chhihc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa1ASrryDMWJ1A_ZFNlknRsAoODftydA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801081205988-0ipmt1pgvh88bluu3ain948t4chhihc9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "801081205988-pnchqs2cfbh2enucig7brqimjgnsb7vc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.skillora"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
