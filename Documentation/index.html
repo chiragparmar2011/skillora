@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skillora LMS Complete Package &mdash; Documentation &amp; Setup Guide</title>
+  <title>Skillora LMS Complete Package &mdash; Master Documentation &amp; Setup Guide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #EA580C;
@@ -49,7 +49,7 @@
 
     /* Sidebar Navigation */
     .sidebar {
-      width: 300px;
+      width: 320px;
       background: #0F172A;
       color: #F8FAFC;
       position: fixed;
@@ -83,15 +83,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 22px;
+      font-weight: 900;
+      font-size: 24px;
       color: #FFFFFF;
       box-shadow: 0 8px 16px rgba(234, 88, 12, 0.35);
     }
 
     .brand-text h2 {
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.5px;
     }
 
@@ -143,10 +143,10 @@
 
     .nav-group-title {
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #64748B;
+      letter-spacing: 1.2px;
+      color: #94A3B8;
       margin-bottom: 6px;
     }
 
@@ -162,188 +162,182 @@
       align-items: center;
       gap: 10px;
       padding: 8px 12px;
-      border-radius: 6px;
-      color: #94A3B8;
+      color: #CBD5E1;
       text-decoration: none;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 500;
-      transition: all 0.2s ease;
+      border-radius: 8px;
+      transition: all 0.2s;
     }
 
-    .nav-item a:hover {
+    .nav-item a:hover, .nav-item a.active {
       color: #FFFFFF;
-      background: rgba(255, 255, 255, 0.06);
-      transform: translateX(3px);
-    }
-
-    .nav-item a.active {
-      color: #FFFFFF;
-      background: #EA580C;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+      background: rgba(234, 88, 12, 0.15);
+      border-left: 3px solid #EA580C;
     }
 
     .sidebar-footer {
       margin-top: auto;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 12px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 11.5px;
       color: #64748B;
       text-align: center;
     }
 
     /* Main Content */
     .main-content {
-      margin-left: 300px;
+      margin-left: 320px;
       flex: 1;
-      padding: 48px 60px 100px;
-      max-width: 1200px;
+      padding: 48px 60px;
+      max-width: 1100px;
     }
 
     /* Hero Banner */
     .hero-banner {
       background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
       border-radius: 20px;
-      padding: 48px 44px;
+      padding: 40px;
       color: #FFFFFF;
-      margin-bottom: 48px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 48px;
+      border: 1px solid #334155;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
     }
 
-    .hero-banner::before {
+    .hero-banner::after {
       content: '';
       position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 320px;
-      height: 320px;
-      background: radial-gradient(circle, rgba(234, 88, 12, 0.35) 0%, transparent 70%);
+      right: -50px;
+      bottom: -50px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(234, 88, 12, 0.25) 0%, transparent 70%);
       border-radius: 50%;
-      pointer-events: none;
     }
 
     .badge-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 14px;
       background: rgba(234, 88, 12, 0.2);
       border: 1px solid rgba(234, 88, 12, 0.4);
-      color: #FB923C;
-      border-radius: 999px;
+      color: #FF8A4C;
+      padding: 6px 14px;
+      border-radius: 20px;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 1px;
       margin-bottom: 16px;
     }
 
     .hero-title {
-      font-size: 38px;
-      font-weight: 800;
-      line-height: 1.2;
-      letter-spacing: -1px;
-      margin-bottom: 16px;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+      line-height: 1.25;
     }
 
     .hero-subtitle {
       font-size: 16px;
-      color: #CBD5E1;
-      max-width: 780px;
-      margin-bottom: 30px;
-      font-weight: 400;
+      color: #94A3B8;
+      max-width: 720px;
+      line-height: 1.6;
+      margin-bottom: 24px;
     }
 
     .hero-meta-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
 
     .hero-meta-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 14px 18px;
+      background: rgba(255,255,255,0.04);
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.06);
     }
 
     .hero-meta-card .label {
       font-size: 11px;
       color: #94A3B8;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.5px;
       font-weight: 600;
     }
 
     .hero-meta-card .value {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 700;
-      color: #FFFFFF;
-      margin-top: 4px;
+      color: #F8FAFC;
+      margin-top: 2px;
     }
 
     /* Section Styling */
     section {
-      margin-bottom: 60px;
+      margin-bottom: 56px;
       scroll-margin-top: 40px;
     }
 
     .section-header {
       margin-bottom: 24px;
-      position: relative;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 14px;
     }
 
     .section-title {
       font-size: 26px;
       font-weight: 800;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.5px;
       color: #0F172A;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .section-desc {
       font-size: 15px;
-      color: var(--text-muted);
-      margin-top: 6px;
+      color: #64748B;
+      margin-top: 4px;
     }
 
-    /* Cards & Grids */
+    /* Cards */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      margin-top: 20px;
+      gap: 20px;
+      margin: 20px 0;
     }
 
     .feature-card {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      transition: all 0.25s ease;
+      border-radius: 14px;
+      padding: 24px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
 
     .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08);
       border-color: #CBD5E1;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
 
     .card-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 22px;
-      margin-bottom: 18px;
+      font-size: 20px;
+      margin-bottom: 16px;
     }
 
     .card-icon.student {
@@ -356,17 +350,23 @@
       color: #D97706;
     }
 
+    .card-icon.tech {
+      background: rgba(16, 185, 129, 0.12);
+      color: #10B981;
+    }
+
     .feature-card h3 {
-      font-size: 19px;
-      font-weight: 700;
-      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
       color: #0F172A;
     }
 
     .feature-card p {
       font-size: 14px;
       color: #64748B;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+      line-height: 1.5;
     }
 
     .feature-list {
@@ -412,16 +412,20 @@
       color: #9A3412;
     }
 
-    .alert svg {
-      width: 22px;
-      height: 22px;
+    .alert-warning {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #991B1B;
+    }
+
+    .alert-icon {
+      font-size: 20px;
       flex-shrink: 0;
-      margin-top: 2px;
     }
 
     .alert-content h4 {
       font-size: 14.5px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 4px;
     }
 
@@ -450,25 +454,23 @@
     }
 
     .code-lang {
-      font-size: 11px;
-      text-transform: uppercase;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 1px;
       color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-family: 'JetBrains Mono', monospace;
     }
 
     .copy-btn {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.15);
       color: #E2E8F0;
-      padding: 4px 10px;
       border-radius: 6px;
-      font-size: 11.5px;
+      padding: 5px 12px;
+      font-size: 12px;
       font-weight: 600;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
       transition: all 0.2s;
     }
 
@@ -479,28 +481,29 @@
     }
 
     pre {
-      margin: 0;
       padding: 16px 20px;
       overflow-x: auto;
-      font-family: 'JetBrains Mono', Consolas, monospace;
-      font-size: 13.5px;
-      color: #E2E8F0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
       line-height: 1.6;
+      color: #E2E8F0;
     }
 
     code {
-      font-family: 'JetBrains Mono', Consolas, monospace;
-      background: #E2E8F0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12.5px;
+      background: #F1F5F9;
       color: #0F172A;
       padding: 2px 6px;
       border-radius: 4px;
-      font-size: 12.5px;
+      font-weight: 600;
     }
 
     pre code {
       background: transparent;
       padding: 0;
       color: inherit;
+      font-weight: 400;
     }
 
     /* Steps */
@@ -540,14 +543,16 @@
 
     .step-body h4 {
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 8px;
+      color: #0F172A;
     }
 
     .step-body p {
       font-size: 14px;
       color: #475569;
       margin-bottom: 12px;
+      line-height: 1.55;
     }
 
     /* Tables */
@@ -578,6 +583,7 @@
       padding: 12px 18px;
       border-bottom: 1px solid var(--border-color);
       color: #475569;
+      vertical-align: top;
     }
 
     tr:last-child td {
@@ -598,7 +604,7 @@
       border: none;
       font-family: inherit;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       color: #64748B;
       cursor: pointer;
       border-bottom: 2px solid transparent;
@@ -651,7 +657,7 @@
       <div class="brand-logo">S</div>
       <div class="brand-text">
         <h2>Skillora LMS</h2>
-        <span>Documentation</span>
+        <span>Master Documentation</span>
       </div>
     </a>
 
@@ -662,71 +668,82 @@
 
     <nav class="nav-sections">
       <div>
-        <div class="nav-group-title">Getting Started</div>
+        <div class="nav-group-title">1. Getting Started</div>
         <ul class="nav-list">
-          <li class="nav-item"><a href="#overview" class="active">Overview & Ecosystem</a></li>
+          <li class="nav-item"><a href="#overview" class="active">Overview &amp; Architecture</a></li>
           <li class="nav-item"><a href="#structure">Package Structure</a></li>
-          <li class="nav-item"><a href="#requirements">Requirements & Prerequisites</a></li>
-          <li class="nav-item"><a href="#quickstart">5-Minute Quickstart</a></li>
+          <li class="nav-item"><a href="#requirements">System Prerequisites</a></li>
+          <li class="nav-item"><a href="#quickstart">5-Minute Installation</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="nav-group-title">The Two Applications</div>
+        <div class="nav-group-title">2. Reskin &amp; Visual Assets</div>
         <ul class="nav-list">
-          <li class="nav-item"><a href="#student-app">Student App Features</a></li>
-          <li class="nav-item"><a href="#instructor-app">Instructor Studio Features</a></li>
-          <li class="nav-item"><a href="#certificate-system">Digital Certificate System</a></li>
+          <li class="nav-item"><a href="#app-icons">Replace App Icons (Both Apps)</a></li>
+          <li class="nav-item"><a href="#splash-screens">Replace Splash Screens</a></li>
+          <li class="nav-item"><a href="#visual-assets">Illustrations &amp; Onboarding</a></li>
+          <li class="nav-item"><a href="#branding">Theme &amp; Brand Colors</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="nav-group-title">Customization & Rebranding</div>
+        <div class="nav-group-title">3. Configuration &amp; Setup</div>
         <ul class="nav-list">
-          <li class="nav-item"><a href="#branding">Colors & Theme Customization</a></li>
-          <li class="nav-item"><a href="#white-label">Change App Name & Package ID</a></li>
-          <li class="nav-item"><a href="#localization">Multi-Language & RTL</a></li>
-          <li class="nav-item"><a href="#backend">Backend & API Integration</a></li>
+          <li class="nav-item"><a href="#white-label">Change Name &amp; Package ID</a></li>
+          <li class="nav-item"><a href="#payments">Stripe Payment Gateway</a></li>
+          <li class="nav-item"><a href="#backend">Backend &amp; API Integration</a></li>
+          <li class="nav-item"><a href="#localization">Multi-Language &amp; Locales</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="nav-group-title">Deployment</div>
+        <div class="nav-group-title">4. Application Usage Guide</div>
         <ul class="nav-list">
-          <li class="nav-item"><a href="#android-build">Build Android AppBundle</a></li>
-          <li class="nav-item"><a href="#ios-build">Build iOS (App Store)</a></li>
-          <li class="nav-item"><a href="#troubleshooting">Troubleshooting & FAQ</a></li>
+          <li class="nav-item"><a href="#student-usage">Student App User Journey</a></li>
+          <li class="nav-item"><a href="#instructor-usage">Instructor Studio User Journey</a></li>
+          <li class="nav-item"><a href="#certificate-system">Digital Certificate Engine</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="nav-group-title">5. Production Release &amp; Signing</div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#android-signing">Android Keystore &amp; Signing</a></li>
+          <li class="nav-item"><a href="#android-build">Build Android AppBundle / APK</a></li>
+          <li class="nav-item"><a href="#ios-signing">iOS Xcode Team &amp; Provisioning</a></li>
+          <li class="nav-item"><a href="#ios-build">Build iOS IPA &amp; TestFlight</a></li>
+          <li class="nav-item"><a href="#troubleshooting">Troubleshooting &amp; FAQ</a></li>
         </ul>
       </div>
     </nav>
 
     <div class="sidebar-footer">
-      Version 1.0.0 &bull; Marketplace Ready
+      Skillora LMS Suite &bull; Commercial Release
     </div>
   </aside>
 
-  <!-- Main Content -->
+  <!-- Main Content Area -->
   <main class="main-content">
 
     <!-- Hero Banner -->
     <div class="hero-banner">
       <div class="badge-pill">
-        <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-        Complete 2-in-1 Flutter LMS Suite
+        <span>★</span> Complete 2-in-1 Flutter LMS Suite
       </div>
-      <h1 class="hero-title">Skillora LMS Complete Package</h1>
+      <h1 class="hero-title">Skillora LMS Master Documentation</h1>
       <p class="hero-subtitle">
-        A commercially ready, dual-application ecosystem designed for modern Ed-Tech businesses. Includes both the <strong>Student Learning App</strong> and the <strong>Skillora Instructor Studio App</strong>, featuring real-time interactive Q&amp;A, instructor follow counters, verifiable digital certificate generation, and GetX architecture.
+        Comprehensive installation, reskinning, visual asset replacement, release signing configuration, and deployment guide for both the <strong>Student Learning App</strong> and the <strong>Skillora Instructor Studio App</strong>.
       </p>
 
       <div class="hero-meta-grid">
         <div class="hero-meta-card">
-          <div class="label">Flutter Framework</div>
+          <div class="label">Flutter Version</div>
           <div class="value">3.24+ &bull; Dart 3.5+</div>
         </div>
         <div class="hero-meta-card">
-          <div class="label">State Management</div>
-          <div class="value">GetX Architecture</div>
+          <div class="label">Architecture</div>
+          <div class="value">GetX Reactive Pattern</div>
         </div>
         <div class="hero-meta-card">
           <div class="label">Code Quality</div>
@@ -739,10 +756,11 @@
       </div>
     </div>
 
-    <!-- Overview Section -->
+    <!-- ==================== SECTION 1: GETTING STARTED ==================== -->
+    
     <section id="overview">
       <div class="section-header">
-        <h2 class="section-title">Overview &amp; Ecosystem</h2>
+        <h2 class="section-title">1. Overview &amp; Ecosystem</h2>
         <p class="section-desc">Understand how the two independent applications form a seamless learning marketplace.</p>
       </div>
 
@@ -762,6 +780,7 @@
             <li>5-Star Rating &amp; Review Submission</li>
             <li>Dynamic Certificate with Instructor Signature</li>
             <li>Multi-Language (English, Hindi, Gujarati, Italian, Chinese)</li>
+            <li>Stripe Checkout Sheet Integration</li>
           </ul>
         </div>
 
@@ -772,16 +791,16 @@
           <ul class="feature-list">
             <li>Real-time Revenue &amp; Analytics Dashboard</li>
             <li>Interactive Course Studio &amp; Curriculum Builder</li>
-            <li>Q&amp;A Resolution Hub with "Instructor" Badge</li>
+            <li>Q&amp;A Resolution Hub with "Verified Instructor" Badge</li>
             <li>Student Review Feedback &amp; Public Reply</li>
-            <li>Wallet Payout Request System</li>
+            <li>Wallet Payout Request System (Bank &amp; PayPal)</li>
             <li>Digital Signature Studio for Certificates</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Package Structure Section -->
+    <!-- Package Structure -->
     <section id="structure">
       <div class="section-header">
         <h2 class="section-title">Package Structure</h2>
@@ -790,38 +809,43 @@
 
       <div class="code-wrapper">
         <div class="code-header">
-          <span class="code-lang">Directory Tree</span>
+          <span class="code-lang">Directory Layout</span>
           <button class="copy-btn" onclick="copyCode(this)">Copy Tree</button>
         </div>
-        <pre><code>Skillora_Complete_Package/
+        <pre><code>Skillora_Codester_Package/
 │
 ├── 📱 Student_App/             <-- Full Student Flutter Application
-│     ├── android/              <-- Native Android project configuration
+│     ├── android/              <-- Native Android project (Groovy build.gradle)
 │     ├── ios/                  <-- Native iOS Xcode project
-│     ├── assets/               <-- App icons, images, mock JSON, fonts
+│     ├── assets/
+│     │     ├── fonts/          <-- Roboto fonts
+│     │     ├── images/         <-- App logos, splash, intro illustrations
+│     │     └── json/           <-- Translations (en, hi, gu, it, zh)
 │     ├── lib/                  <-- GetX Controllers, Views, Models, Services
-│     ├── pubspec.yaml          <-- Student dependencies & asset configuration
+│     ├── pubspec.yaml          <-- Student dependencies & launcher icon config
 │     └── README.md
 │
 ├── 👨‍🏫 Instructor_App/          <-- Full Instructor Studio Flutter Application
-│     ├── android/              <-- Native Android project configuration
+│     ├── android/              <-- Native Android project (Kotlin build.gradle.kts)
 │     ├── ios/                  <-- Native iOS Xcode project
-│     ├── assets/               <-- Instructor UI assets, logos, fonts
+│     ├── assets/
+│     │     ├── fonts/          <-- Roboto fonts
+│     │     ├── images/         <-- Instructor UI assets, logos, splash
+│     │     └── json/           <-- Translations (en, hi, gu, it, zh)
 │     ├── lib/                  <-- Instructor Studio GetX architecture
-│     ├── test/                 <-- Flutter widget smoke tests
-│     ├── pubspec.yaml          <-- Instructor dependencies & asset config
+│     ├── pubspec.yaml          <-- Instructor dependencies & launcher icon config
 │     └── README.md
 │
-└── 📄 Documentation/           <-- Complete Setup & Customization Guide
-      └── index.html            <-- This Interactive Documentation Portal</code></pre>
+└── 📄 Documentation/           <-- Interactive Offline Documentation Portal
+      └── index.html            <-- This Master Documentation Portal</code></pre>
       </div>
     </section>
 
-    <!-- Requirements Section -->
+    <!-- System Requirements -->
     <section id="requirements">
       <div class="section-header">
-        <h2 class="section-title">System Requirements &amp; Prerequisites</h2>
-        <p class="section-desc">Ensure your development environment meets the following specifications before running the projects.</p>
+        <h2 class="section-title">System Prerequisites</h2>
+        <p class="section-desc">Ensure your development environment meets these specifications before running the projects.</p>
       </div>
 
       <div class="table-container">
@@ -830,49 +854,44 @@
             <tr>
               <th>Component</th>
               <th>Required Version</th>
-              <th>Recommendation / Notes</th>
+              <th>Recommendation &amp; Notes</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><strong>Flutter SDK</strong></td>
-              <td><code>&gt;= 3.0.0 &lt; 4.0.0</code></td>
-              <td>Flutter 3.24.0 or newer recommended</td>
-            </tr>
-            <tr>
-              <td><strong>Dart SDK</strong></td>
-              <td><code>&gt;= 3.0.0</code></td>
-              <td>Included automatically with Flutter 3</td>
+              <td><code>&gt;= 3.24.0</code></td>
+              <td>Tested with Flutter 3.24+ &amp; Dart 3.5+</td>
             </tr>
             <tr>
               <td><strong>Java JDK</strong></td>
               <td>JDK 17</td>
-              <td>Required for modern Gradle &amp; Android AGP 8+</td>
+              <td>Required for modern Gradle &amp; Android Gradle Plugin 8+</td>
             </tr>
             <tr>
               <td><strong>Android Studio</strong></td>
-              <td>Hedgehog / Iguana / Koala or newer</td>
-              <td>With Android SDK Platform 34+</td>
+              <td>Iguana / Koala / Ladybug or newer</td>
+              <td>With Android SDK Platform 34+ and Android Build-Tools</td>
             </tr>
             <tr>
               <td><strong>Xcode (iOS)</strong></td>
               <td>Xcode 15 or 16</td>
-              <td>macOS required for compiling iOS</td>
+              <td>macOS required for compiling iOS binaries</td>
             </tr>
             <tr>
               <td><strong>CocoaPods</strong></td>
               <td><code>&gt;= 1.14.0</code></td>
-              <td>Run <code>sudo gem install cocoapods</code></td>
+              <td>Run <code>sudo gem install cocoapods</code> on macOS</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Quickstart Section -->
+    <!-- 5-Minute Installation -->
     <section id="quickstart">
       <div class="section-header">
-        <h2 class="section-title">5-Minute Quickstart Guide</h2>
+        <h2 class="section-title">5-Minute Installation &amp; Local Execution</h2>
         <p class="section-desc">Follow these straightforward steps to run both applications on your simulator or physical device.</p>
       </div>
 
@@ -886,11 +905,11 @@
           <div class="step-item">
             <div class="step-number">1</div>
             <div class="step-body">
-              <h4>Open Terminal in Student_App Directory</h4>
-              <p>Navigate to the <code>Student_App</code> folder in your command line or open it directly in VS Code / Android Studio:</p>
+              <h4>Navigate into Student_App</h4>
+              <p>Open your terminal or command prompt in the extracted package directory:</p>
               <div class="code-wrapper">
-                <div class="code-header"><span class="code-lang">Bash / Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-                <pre><code>cd Skillora_Complete_Package/Student_App</code></pre>
+                <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                <pre><code>cd Student_App</code></pre>
               </div>
             </div>
           </div>
@@ -899,7 +918,7 @@
             <div class="step-number">2</div>
             <div class="step-body">
               <h4>Install Dependencies</h4>
-              <p>Download and link all Flutter packages:</p>
+              <p>Download and resolve all packages declared in <code>pubspec.yaml</code>:</p>
               <div class="code-wrapper">
                 <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
                 <pre><code>flutter pub get</code></pre>
@@ -910,8 +929,8 @@
           <div class="step-item">
             <div class="step-number">3</div>
             <div class="step-body">
-              <h4>Launch the App</h4>
-              <p>Ensure an emulator is booted or a physical device is connected, then execute:</p>
+              <h4>Launch the Student App</h4>
+              <p>Boot up your Android Emulator or iOS Simulator, then execute:</p>
               <div class="code-wrapper">
                 <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
                 <pre><code>flutter run</code></pre>
@@ -926,11 +945,11 @@
           <div class="step-item">
             <div class="step-number">1</div>
             <div class="step-body">
-              <h4>Open Terminal in Instructor_App Directory</h4>
-              <p>Navigate to the <code>Instructor_App</code> folder:</p>
+              <h4>Navigate into Instructor_App</h4>
+              <p>Open terminal in the <code>Instructor_App</code> folder:</p>
               <div class="code-wrapper">
                 <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-                <pre><code>cd Skillora_Complete_Package/Instructor_App</code></pre>
+                <pre><code>cd Instructor_App</code></pre>
               </div>
             </div>
           </div>
@@ -938,12 +957,11 @@
           <div class="step-item">
             <div class="step-number">2</div>
             <div class="step-body">
-              <h4>Fetch Dependencies &amp; Run Smoke Test</h4>
-              <p>Resolve packages and verify stability:</p>
+              <h4>Resolve Packages</h4>
+              <p>Fetch the educator studio dependencies:</p>
               <div class="code-wrapper">
                 <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-                <pre><code>flutter pub get
-flutter test</code></pre>
+                <pre><code>flutter pub get</code></pre>
               </div>
             </div>
           </div>
@@ -952,16 +970,16 @@ flutter test</code></pre>
             <div class="step-number">3</div>
             <div class="step-body">
               <h4>Launch the Instructor App</h4>
-              <p>Run the educator studio:</p>
+              <p>Run the educator dashboard on your device:</p>
               <div class="code-wrapper">
                 <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
                 <pre><code>flutter run</code></pre>
               </div>
               <div class="alert alert-tip">
-                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+                <div class="alert-icon">💡</div>
                 <div class="alert-content">
                   <h4>Quick Demo Login</h4>
-                  <p>On the Sign In screen of Instructor App, tap the <strong>"Auto-Fill Demo Credentials"</strong> pill button to automatically populate demo instructor login information and immediately experience the dashboard.</p>
+                  <p>On the Sign In screen of the Instructor App, tap the <strong>"Auto-Fill Demo Credentials"</strong> pill button to automatically populate demo credentials and immediately access the full revenue and curriculum studio.</p>
                 </div>
               </div>
             </div>
@@ -970,182 +988,349 @@ flutter test</code></pre>
       </div>
     </section>
 
-    <!-- Student App Deep Dive -->
-    <section id="student-app">
+    <!-- ==================== SECTION 2: RESKIN & VISUAL ASSETS ==================== -->
+
+    <section id="app-icons">
       <div class="section-header">
-        <h2 class="section-title">Student App Features</h2>
-        <p class="section-desc">Key modules and components built for optimal learner retention.</p>
-      </div>
-
-      <div class="card-grid">
-        <div class="feature-card">
-          <h3>Progress &amp; Lesson Checklists</h3>
-          <p>Every course features an interactive checklist where students mark lessons complete. The completion percentage automatically recalculates and unlocks the final certificate upon 100% completion.</p>
-          <code>lib/screen/drawer/my_course/course_ongoing_detail_view.dart</code>
-        </div>
-
-        <div class="feature-card">
-          <h3>In-Course Q&amp;A Community</h3>
-          <p>Students can ask questions directly inside each course lecture. Instructors can answer questions, and students receive badge-verified responses.</p>
-          <code>lib/screen/dashboard/home/widget/course_qa_dialog.dart</code>
-        </div>
-
-        <div class="feature-card">
-          <h3>Instructor Follow Counter</h3>
-          <p>Students can view instructor profiles, tap Follow, and instantly observe live incrementation of total followers with shared reactive state.</p>
-          <code>lib/screen/drawer/mentor/instructor_detail_view.dart</code>
-        </div>
-
-        <div class="feature-card">
-          <h3>Verified Digital Certificate</h3>
-          <p>Upon finishing all lectures, students can generate, view, and share high-resolution certificates carrying the instructor's digital signature and unique serial number.</p>
-          <code>lib/screen/drawer/my_course/widget/certificate_view.dart</code>
-        </div>
-      </div>
-    </section>
-
-    <!-- Instructor Studio Deep Dive -->
-    <section id="instructor-app">
-      <div class="section-header">
-        <h2 class="section-title">Instructor Studio Features</h2>
-        <p class="section-desc">Tools built specifically for educators to manage their courses and students.</p>
-      </div>
-
-      <div class="card-grid">
-        <div class="feature-card">
-          <h3>Analytics &amp; Revenue Overview</h3>
-          <p>Displays live metric cards: Total Revenue, Active Students, Total Followers, and Overall 5-Star Rating, plus recent enrollment feed.</p>
-          <code>lib/screen/dashboard/tabs/home_tab_view.dart</code>
-        </div>
-
-        <div class="feature-card">
-          <h3>Course Studio &amp; Curriculum Builder</h3>
-          <p>Multi-step wizard allowing instructors to add course metadata, modules, video lectures, durations, and free preview flags.</p>
-          <code>lib/screen/course/course_create_view.dart</code>
-        </div>
-
-        <div class="feature-card">
-          <h3>Q&amp;A Hub &amp; Reply Modal</h3>
-          <p>Filter by Unanswered vs. All questions. Post instant replies marked with the official golden Verified Instructor badge.</p>
-          <code>lib/screen/qa/qa_hub_view.dart</code>
-        </div>
-
-        <div class="feature-card">
-          <h3>Earnings &amp; Payout Requests</h3>
-          <p>View available balance, lifetime earnings, recent withdrawal logs, and submit new payout requests to Bank Transfer or PayPal.</p>
-          <code>lib/screen/earnings/earnings_view.dart</code>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certificate & Signature System -->
-    <section id="certificate-system">
-      <div class="section-header">
-        <h2 class="section-title">Digital Certificate &amp; Signature Integration</h2>
-        <p class="section-desc">How the Instructor's digital signature links directly to the Student's course completion certificate.</p>
+        <h2 class="section-title">2. Replace App Icons (Both Applications)</h2>
+        <p class="section-desc">Project-specific guide to generate high-resolution launcher icons for Android and iOS in both apps.</p>
       </div>
 
       <p>
-        One of Skillora's standout commercial features is its verifiable certificate ecosystem:
+        Both the <strong>Student_App</strong> and <strong>Instructor_App</strong> are pre-configured with the industry-standard <code>flutter_launcher_icons</code> package. This automatically generates all required mipmap and iOS app icon density variants.
       </p>
+
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('icon-student', this)">Student App Icons</button>
+        <button class="tab-btn" onclick="switchTab('icon-instructor', this)">Instructor App Icons</button>
+      </div>
+
+      <div id="icon-student" class="tab-content active">
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-body">
+              <h4>Prepare Your New Logo Asset</h4>
+              <p>Create a square PNG image of your brand logo (recommended size: <strong>1024 x 1024 px</strong> or at least <strong>512 x 512 px</strong> with no transparency if targeting iOS).</p>
+              <p>Save and replace your logo file at:</p>
+              <code>Student_App/assets/images/app_logo.png</code>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-body">
+              <h4>Verify pubspec.yaml Icon Configuration</h4>
+              <p>Open <code>Student_App/pubspec.yaml</code>. The launcher icon configuration is pre-defined at lines 109-114:</p>
+              <div class="code-wrapper">
+                <div class="code-header"><span class="code-lang">YAML (Student_App/pubspec.yaml)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                <pre><code>flutter_icons:
+  android: "ic_launcher"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/app_logo.png"
+  min_sdk_android: 21</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-body">
+              <h4>Generate All Icon Densities</h4>
+              <p>Run the launcher icon generation command inside the <code>Student_App</code> directory:</p>
+              <div class="code-wrapper">
+                <div class="code-header"><span class="code-lang">Terminal (in Student_App)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                <pre><code>flutter pub get
+dart run flutter_launcher_icons</code></pre>
+              </div>
+              <p style="margin-top: 8px;">
+                This command automatically generates all Android mipmap resolutions (<code>android/app/src/main/res/mipmap-*</code>) and the iOS Asset Catalog (<code>ios/Runner/Assets.xcassets/AppIcon.appiconset/</code>).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="icon-instructor" class="tab-content">
+        <div class="steps-container">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-body">
+              <h4>Prepare Your Instructor Studio Logo</h4>
+              <p>Prepare a <strong>1024 x 1024 px</strong> PNG icon representing your educator brand.</p>
+              <p>Replace the file at:</p>
+              <code>Instructor_App/assets/images/app_logo.png</code>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-body">
+              <h4>Verify Instructor pubspec.yaml</h4>
+              <p>Open <code>Instructor_App/pubspec.yaml</code> (lines 32-37):</p>
+              <div class="code-wrapper">
+                <div class="code-header"><span class="code-lang">YAML (Instructor_App/pubspec.yaml)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                <pre><code>flutter_icons:
+  android: "ic_launcher"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/app_logo.png"
+  min_sdk_android: 21</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-body">
+              <h4>Run Generator Command</h4>
+              <p>In terminal, run inside <code>Instructor_App</code>:</p>
+              <div class="code-wrapper">
+                <div class="code-header"><span class="code-lang">Terminal (in Instructor_App)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+                <pre><code>flutter pub get
+dart run flutter_launcher_icons</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Splash Screens -->
+    <section id="splash-screens">
+      <div class="section-header">
+        <h2 class="section-title">Replace Splash Screens &amp; Launch Drawables</h2>
+        <p class="section-desc">Complete walkthrough for customizing both the native device launch splash and the in-app animated Flutter splash screens.</p>
+      </div>
+
+      <p>
+        Skillora implements a <strong>2-stage splash experience</strong>: the native OS launch screen (which renders immediately while Flutter boots), followed by the rich animated Flutter splash screen with cross-fading brand logos.
+      </p>
+
+      <h3>Part A: In-App Animated Flutter Splash Screens</h3>
+      <p>Both applications display an animated splash screen located at:</p>
+      <ul style="margin: 8px 0 16px 20px; color: #475569;">
+        <li>Student App: <code>Student_App/lib/screen/splash/splash.dart</code></li>
+        <li>Instructor App: <code>Instructor_App/lib/screen/splash/splash_view.dart</code></li>
+      </ul>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Asset Name</th>
+              <th>Relative File Path (Both Apps)</th>
+              <th>Recommended Size</th>
+              <th>Purpose &amp; Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>splash_one.png</code></td>
+              <td><code>assets/images/splash_one.png</code></td>
+              <td>1080 x 2400 px</td>
+              <td>Primary doodle / brand wallpaper displayed on initial frame</td>
+            </tr>
+            <tr>
+              <td><code>splash_two.png</code></td>
+              <td><code>assets/images/splash_two.png</code></td>
+              <td>1080 x 2400 px</td>
+              <td>Secondary wallpaper transitioning during loading sequence</td>
+            </tr>
+            <tr>
+              <td><code>logo_green.png</code></td>
+              <td><code>assets/images/logo_green.png</code></td>
+              <td>600 x 300 px</td>
+              <td>Dark-contrast brand logo with horizontal typography</td>
+            </tr>
+            <tr>
+              <td><code>logo_white.png</code></td>
+              <td><code>assets/images/logo_white.png</code></td>
+              <td>600 x 300 px</td>
+              <td>White/monochrome brand logo with transparent background</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="alert alert-tip">
+        <div class="alert-icon">🎨</div>
+        <div class="alert-content">
+          <h4>Customizing Splash Delay Duration</h4>
+          <p>
+            To adjust how long the splash screen stays before navigating to the main screen, open:
+            <br/><code>Student_App/lib/screen/splash/controller/splash_controller.dart</code>
+            <br/><code>Instructor_App/lib/screen/splash/splash_controller.dart</code>
+            <br/>Locate the <code>Timer(const Duration(seconds: 3), ...)</code> line and change <code>seconds: 3</code> to your desired duration.
+          </p>
+        </div>
+      </div>
+
+      <h3>Part B: Native Launch Splash (Android &amp; iOS)</h3>
 
       <div class="steps-container">
         <div class="step-item">
           <div class="step-number">1</div>
           <div class="step-body">
-            <h4>Instructor Configures Digital Signature</h4>
-            <p>In the Instructor App (under <strong>Profile &rarr; Digital Signature</strong>), the teacher selects their preferred stylized script font or uploads a PNG signature.</p>
+            <h4>Native Android Launch Background</h4>
+            <p>To change the native launch splash background color or image in Android before Flutter initializes:</p>
+            <p>Open <code>android/app/src/main/res/drawable/launch_background.xml</code> in either project:</p>
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">XML (launch_background.xml)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;layer-list xmlns:android="http://schemas.android.com/apk/res/android"&gt;
+    &lt;!-- Background color --&gt;
+    &lt;item android:drawable="@android:color/white" /&gt;
+
+    &lt;!-- Optional centered logo: uncomment and place launch_image.png in res/drawable/ --&gt;
+    &lt;!-- 
+    &lt;item&gt;
+        &lt;bitmap
+            android:gravity="center"
+            android:src="@drawable/launch_image" /&gt;
+    &lt;/item&gt; 
+    --&gt;
+&lt;/layer-list&gt;</code></pre>
+            </div>
           </div>
         </div>
 
         <div class="step-item">
           <div class="step-number">2</div>
           <div class="step-body">
-            <h4>Student Completes Course</h4>
-            <p>Once all lessons in a course are marked complete (100% progress), the student receives the <strong>"Claim Certificate"</strong> prompt.</p>
-          </div>
-        </div>
-
-        <div class="step-item">
-          <div class="step-number">3</div>
-          <div class="step-body">
-            <h4>Certificate Rendering &amp; Stamping</h4>
-            <p>The certificate dialog renders the student name, course title, completion date, unique serial code, and the instructor's digital signature.</p>
+            <h4>Native iOS Launch Screen</h4>
+            <p>
+              Open <code>ios/Runner.xcworkspace</code> in Xcode. In the project navigator, open:
+              <br/><code>Runner &rarr; Runner &rarr; Base.lproj &rarr; LaunchScreen.storyboard</code>
+            </p>
+            <p>
+              You can visually update the background color or replace the launch image inside:
+              <br/><code>ios/Runner/Assets.xcassets/LaunchImage.imageset/</code>
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Branding & Customization -->
-    <section id="branding">
+    <!-- Visual Assets & Onboarding -->
+    <section id="visual-assets">
       <div class="section-header">
-        <h2 class="section-title">Colors &amp; Theme Customization</h2>
-        <p class="section-desc">Easily adapt the visual styling to match your brand palette in seconds.</p>
+        <h2 class="section-title">Visual Assets, Illustrations &amp; Onboarding</h2>
+        <p class="section-desc">Locations and dimensions for all illustration assets across both applications.</p>
       </div>
-
-      <p>All colors are centrally defined in <code>app_colors.dart</code> inside each project:</p>
 
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Color Token</th>
-              <th>Default Hex</th>
-              <th>Description</th>
+              <th>File Path</th>
+              <th>App</th>
+              <th>Dimensions</th>
+              <th>Used On Screen</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><code>primaryColor</code></td>
-              <td><code>#EA580C</code></td>
-              <td>Skillora Terracotta Orange — buttons, active states, key highlights</td>
+              <td><code>assets/images/intro_one.png</code></td>
+              <td>Both Apps</td>
+              <td>600 x 600 px (PNG)</td>
+              <td>Onboarding Slide 1: Welcome &amp; Explore Courses</td>
             </tr>
             <tr>
-              <td><code>surfaceDark</code></td>
-              <td><code>#1C1917</code></td>
-              <td>Dark Charcoal — navigation bars, hero headers, dark mode backgrounds</td>
+              <td><code>assets/images/intro_two.png</code></td>
+              <td>Both Apps</td>
+              <td>600 x 600 px (PNG)</td>
+              <td>Onboarding Slide 2: Interactive Video Player</td>
             </tr>
             <tr>
-              <td><code>accentGold</code></td>
-              <td><code>#D4AF37</code></td>
-              <td>Amber Gold — certificate borders, verified instructor badges, 5-star ratings</td>
+              <td><code>assets/images/intro_three.png</code></td>
+              <td>Both Apps</td>
+              <td>600 x 600 px (PNG)</td>
+              <td>Onboarding Slide 3: Earn Verifiable Certificates</td>
+            </tr>
+            <tr>
+              <td><code>assets/images/course_one.png</code></td>
+              <td>Instructor App</td>
+              <td>800 x 500 px (PNG)</td>
+              <td>Default Course Cover Thumbnail 1</td>
+            </tr>
+            <tr>
+              <td><code>assets/images/course_two.png</code></td>
+              <td>Instructor App</td>
+              <td>800 x 500 px (PNG)</td>
+              <td>Default Course Cover Thumbnail 2</td>
+            </tr>
+            <tr>
+              <td><code>assets/images/course_three.png</code></td>
+              <td>Instructor App</td>
+              <td>800 x 500 px (PNG)</td>
+              <td>Default Course Cover Thumbnail 3</td>
+            </tr>
+            <tr>
+              <td><code>assets/images/mentor_one.png</code></td>
+              <td>Instructor App</td>
+              <td>400 x 400 px (PNG)</td>
+              <td>Instructor Profile Avatar Preview</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </section>
+
+    <!-- Brand Colors -->
+    <section id="branding">
+      <div class="section-header">
+        <h2 class="section-title">Theme &amp; Brand Color Customization</h2>
+        <p class="section-desc">Easily adapt the visual styling to match your brand palette in seconds.</p>
+      </div>
+
+      <p>
+        All colors are centralized inside <code>lib/utilities/app_colors.dart</code> in both projects. To change the primary terracotta theme to your company brand color, update <code>primaryColor</code>:
+      </p>
 
       <div class="code-wrapper">
         <div class="code-header">
-          <span class="code-lang">Dart (app_colors.dart)</span>
+          <span class="code-lang">Dart (lib/utilities/app_colors.dart)</span>
           <button class="copy-btn" onclick="copyCode(this)">Copy</button>
         </div>
-        <pre><code>// In Student_App/lib/utilities/app_colors.dart
-// and Instructor_App/lib/utilities/app_colors.dart
+        <pre><code>import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color primary = Color(0xFFEA580C);      // Change to your brand color
-  static const Color accentGold = Color(0xFFD4AF37);    // Badge & certificate accents
-  static const Color darkBg = Color(0xFF1C1917);        // Dark mode backgrounds
-  static const Color cardBg = Colors.white;
+  // Replace with your primary brand color (e.g. #2563EB for Royal Blue, #7C3AED for Purple)
+  static const Color primaryColor = Color(0xffEA580C); 
+
+  static const Color black = Color(0xff1C1917);
+  static const Color white = Colors.white;
+  static const Color bgColorWhite = Color(0xffFAF8F5);
+
+  // Status & Highlights
+  static const Color yellowColor = Color(0xffF59E0B);
+  static const Color green = Color(0xff10B981);
+  static const Color red = Color(0xffEF4444);
+
+  // Accent & Gold (used in certificates and verified badges)
+  static const Color gold = Color(0xffD4AF37);
 }</code></pre>
       </div>
     </section>
 
-    <!-- White-Labeling & Package ID -->
+    <!-- ==================== SECTION 3: CONFIGURATION ==================== -->
+
     <section id="white-label">
       <div class="section-header">
-        <h2 class="section-title">Change App Name &amp; Package ID</h2>
-        <p class="section-desc">Crucial steps before publishing to Google Play Store and Apple App Store.</p>
+        <h2 class="section-title">3. Change App Name &amp; Package Identifier</h2>
+        <p class="section-desc">Crucial white-labeling steps before publishing to Google Play Store and Apple App Store.</p>
       </div>
 
       <div class="steps-container">
         <div class="step-item">
           <div class="step-number">1</div>
           <div class="step-body">
-            <h4>Change Android Package Name</h4>
-            <p>Open <code>android/app/build.gradle</code> in each app and update <code>applicationId</code>:</p>
+            <h4>Change Android Package Name (Application ID)</h4>
+            <p><strong>For Student_App (Groovy DSL):</strong> Open <code>Student_App/android/app/build.gradle</code>:</p>
             <div class="code-wrapper">
-              <div class="code-header"><span class="code-lang">Groovy (build.gradle)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <div class="code-header"><span class="code-lang">Groovy (Student_App/android/app/build.gradle)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
               <pre><code>defaultConfig {
     // Replace with your company reverse domain
     applicationId "com.yourcompany.skillorastudent"
@@ -1155,6 +1340,19 @@ class AppColors {
     versionName flutterVersionName
 }</code></pre>
             </div>
+
+            <p style="margin-top: 16px;"><strong>For Instructor_App (Kotlin DSL):</strong> Open <code>Instructor_App/android/app/build.gradle.kts</code>:</p>
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">Kotlin (Instructor_App/android/app/build.gradle.kts)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>defaultConfig {
+    // Replace with your company reverse domain
+    applicationId = "com.yourcompany.skillorainstructor"
+    minSdk = flutter.minSdkVersion
+    targetSdk = flutter.targetSdkVersion
+    versionCode = flutter.versionCode
+    versionName = flutter.versionName
+}</code></pre>
+            </div>
           </div>
         </div>
 
@@ -1162,7 +1360,11 @@ class AppColors {
           <div class="step-number">2</div>
           <div class="step-body">
             <h4>Change iOS Bundle Identifier</h4>
-            <p>Open the project in Xcode (<code>ios/Runner.xcworkspace</code>) or edit <code>ios/Runner.xcodeproj/project.pbxproj</code> to change <code>PRODUCT_BUNDLE_IDENTIFIER</code> to your custom identifier.</p>
+            <p>Open <code>ios/Runner.xcworkspace</code> in Xcode. Under <strong>Targets &rarr; Runner &rarr; Signing &amp; Capabilities</strong>, change the <strong>Bundle Identifier</strong>:</p>
+            <ul>
+              <li>Student App: <code>com.yourcompany.skillorastudent</code></li>
+              <li>Instructor App: <code>com.yourcompany.skillorainstructor</code></li>
+            </ul>
           </div>
         </div>
 
@@ -1170,149 +1372,520 @@ class AppColors {
           <div class="step-number">3</div>
           <div class="step-body">
             <h4>Change App Display Name</h4>
-            <p><strong>Android:</strong> Edit <code>android/app/src/main/AndroidManifest.xml</code> &rarr; <code>android:label="Your App Name"</code>.<br>
-            <strong>iOS:</strong> Edit <code>ios/Runner/Info.plist</code> &rarr; <code>&lt;key&gt;CFBundleDisplayName&lt;/key&gt; &lt;string&gt;Your App Name&lt;/string&gt;</code>.</p>
+            <p><strong>Android Display Name:</strong> Edit <code>android/app/src/main/AndroidManifest.xml</code>:</p>
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">XML (AndroidManifest.xml)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>&lt;application
+    android:label="Your App Name"
+    android:name="${applicationName}"
+    android:icon="@mipmap/ic_launcher"&gt;</code></pre>
+            </div>
+
+            <p style="margin-top: 14px;"><strong>iOS Display Name:</strong> Edit <code>ios/Runner/Info.plist</code>:</p>
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">XML (Info.plist)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>&lt;key&gt;CFBundleDisplayName&lt;/key&gt;
+&lt;string&gt;Your App Name&lt;/string&gt;</code></pre>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Multi-Language & RTL -->
-    <section id="localization">
+    <!-- Stripe & Payments -->
+    <section id="payments">
       <div class="section-header">
-        <h2 class="section-title">Multi-Language &amp; RTL Support</h2>
-        <p class="section-desc">Skillora comes pre-configured with 5 languages: English, Hindi, Gujarati, Italian, and Chinese.</p>
-      </div>
-
-      <p>Translation JSON files are located in <code>assets/json/</code>:</p>
-      <ul style="margin: 12px 0 18px 24px; color: #475569;">
-        <li><code>en.json</code> &mdash; English (Default)</li>
-        <li><code>hi.json</code> &mdash; Hindi</li>
-        <li><code>ar.json</code> &mdash; Arabic (Right-to-Left Layout automatically applied)</li>
-      </ul>
-
-      <p>To add a new language (e.g. Spanish - <code>es.json</code>):</p>
-      <ol style="margin: 12px 0 18px 24px; color: #475569; display: flex; flex-direction: column; gap: 8px;">
-        <li>Create <code>assets/json/es.json</code> with translated keys.</li>
-        <li>Declare it in <code>pubspec.yaml</code> under <code>assets:</code>.</li>
-        <li>Add <code>Locale('es', 'ES')</code> to <code>lib/translation/localization_delegates.dart</code>.</li>
-      </ol>
-    </section>
-
-    <!-- Backend & Integration -->
-    <section id="backend">
-      <div class="section-header">
-        <h2 class="section-title">Backend &amp; API Integration</h2>
-        <p class="section-desc">Clean architecture ready for Laravel, Node.js, Firebase, or Supabase.</p>
+        <h2 class="section-title">Stripe Payment Gateway Configuration</h2>
+        <p class="section-desc">How to set up your Stripe publishable keys, currency codes, and merchant info.</p>
       </div>
 
       <p>
-        All HTTP requests and service communication are organized in the <code>lib/services/</code> directory. Simply update <code>url_endpoints.dart</code> with your backend base URL:
+        The Student App features native <strong>flutter_stripe</strong> payment sheet integration. All payment credentials and currency symbols are located in:
+        <br/><code>Student_App/lib/utilities/app_constants.dart</code>
       </p>
 
       <div class="code-wrapper">
         <div class="code-header">
-          <span class="code-lang">Dart (url_endpoints.dart)</span>
+          <span class="code-lang">Dart (app_constants.dart)</span>
           <button class="copy-btn" onclick="copyCode(this)">Copy</button>
         </div>
-        <pre><code>class UrlEndpoints {
-  // Replace with your live REST API server URL
-  static const String baseUrl = "https://api.yourdomain.com/api/v1/";
-  
-  static const String login = "${baseUrl}auth/login";
-  static const String courses = "${baseUrl}courses";
-  static const String questions = "${baseUrl}courses/qa";
-  static const String reviews = "${baseUrl}courses/reviews";
-  static const String payouts = "${baseUrl}instructor/payouts";
+        <pre><code>class AppConstants {
+  // Currency Configuration
+  static String currencySymbol = '\$';       // Change to your currency symbol ($, €, £, etc.)
+  static String currencyCode = "USD";        // ISO Currency Code (USD, EUR, GBP, INR, etc.)
+  static String merchantCountryCode = 'US';  // Two-letter ISO country code
+  static String merchantDisplayName = 'Skillora LMS';
+
+  // Stripe Publishable Key (Replace with your Stripe Dashboard Live/Test Key)
+  static String stripePublishableKey = 'pk_live_your_stripe_publishable_key_here';
+}</code></pre>
+      </div>
+
+      <div class="alert alert-important">
+        <div class="alert-icon">⚠️</div>
+        <div class="alert-content">
+          <h4>Testing Stripe</h4>
+          <p>
+            During development, use your Stripe test key starting with <code>pk_test_...</code>. Before publishing to Google Play Store or Apple App Store, replace it with your production live key starting with <code>pk_live_...</code>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Backend & API -->
+    <section id="backend">
+      <div class="section-header">
+        <h2 class="section-title">Backend &amp; API Integration</h2>
+        <p class="section-desc">How to transition from mock data to your live REST API server.</p>
+      </div>
+
+      <p>
+        All HTTP networking is centralized inside <code>Student_App/lib/services/api_client.dart</code>. To connect Skillora to your live backend (Laravel, Node.js, Django, or Firebase):
+      </p>
+
+      <div class="code-wrapper">
+        <div class="code-header">
+          <span class="code-lang">Dart (lib/services/api_client.dart)</span>
+          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+        </div>
+        <pre><code>class ApiClient {
+  // Replace with your production server endpoint
+  static const String baseUrl = 'https://api.yourdomain.com/api/v1/';
+
+  // Authentication header with Bearer Token
+  Map&lt;String, String&gt; getHeaders(String? token) {
+    return {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      if (token != null) 'Authorization': 'Bearer $token',
+    };
+  }
 }</code></pre>
       </div>
     </section>
 
-    <!-- Android Build -->
-    <section id="android-build">
+    <!-- Multi-Language -->
+    <section id="localization">
       <div class="section-header">
-        <h2 class="section-title">Build Android AppBundle (Google Play)</h2>
-        <p class="section-desc">Generate release production binaries for the Google Play Store.</p>
+        <h2 class="section-title">Multi-Language &amp; Locales</h2>
+        <p class="section-desc">Skillora comes pre-configured with 5 international languages.</p>
+      </div>
+
+      <p>Translation JSON files are located in <code>assets/json/</code> inside each application:</p>
+      <ul style="margin: 12px 0 18px 24px; color: #475569;">
+        <li><code>en.json</code> &mdash; English (Default)</li>
+        <li><code>hi.json</code> &mdash; Hindi (हिंदी)</li>
+        <li><code>gu.json</code> &mdash; Gujarati (ગુજરાતી)</li>
+        <li><code>it.json</code> &mdash; Italian (Italiano)</li>
+        <li><code>zh.json</code> &mdash; Chinese (中文)</li>
+      </ul>
+
+      <p>To add a new language (e.g. Spanish - <code>es.json</code>):</p>
+      <ol style="margin: 12px 0 18px 24px; color: #475569; display: flex; flex-direction: column; gap: 8px;">
+        <li>Copy <code>assets/json/en.json</code> and create <code>assets/json/es.json</code> with translated strings.</li>
+        <li>Add the file path to <code>pubspec.yaml</code> under <code>assets:</code>.</li>
+        <li>Add <code>Locale('es', 'ES')</code> to <code>lib/translation/translation.dart</code>.</li>
+      </ol>
+    </section>
+
+    <!-- ==================== SECTION 4: APPLICATION USAGE ==================== -->
+
+    <section id="student-usage">
+      <div class="section-header">
+        <h2 class="section-title">4. Student App User Journey</h2>
+        <p class="section-desc">Key features and workflows available to learners in the Student App.</p>
       </div>
 
       <div class="steps-container">
         <div class="step-item">
           <div class="step-number">1</div>
           <div class="step-body">
-            <h4>Generate Keystore File</h4>
-            <div class="code-wrapper">
-              <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-              <pre><code>keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload</code></pre>
-            </div>
+            <h4>Course Discovery &amp; Search</h4>
+            <p>Students browse the home catalog, filter courses by category carousels (UI/UX, Mobile Dev, Web Dev, AI), or perform instant searches with real-time query caching.</p>
           </div>
         </div>
 
         <div class="step-item">
           <div class="step-number">2</div>
           <div class="step-body">
-            <h4>Create key.properties</h4>
-            <p>Create <code>android/key.properties</code> with your keystore path and passwords.</p>
+            <h4>Enrollment &amp; Video Lecture Player</h4>
+            <p>Enrolled courses unlock the video player with 1080p streaming, playback speed controls (1.0x to 2.0x), and distraction-free landscape mode.</p>
           </div>
         </div>
 
         <div class="step-item">
           <div class="step-number">3</div>
           <div class="step-body">
-            <h4>Compile Release AppBundle</h4>
-            <div class="code-wrapper">
-              <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
-              <pre><code>flutter build appbundle --release</code></pre>
-            </div>
-            <p style="margin-top: 8px;">Output file: <code>build/app/outputs/bundle/release/app-release.aab</code></p>
+            <h4>Interactive Lesson Checklist &amp; Progress</h4>
+            <p>Learners tap checkboxes as they complete lectures. The progress ring auto-recalculates from 0% to 100% using reactive GetX state.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-body">
+            <h4>In-Course Q&amp;A Community</h4>
+            <p>Students can ask questions directly inside each course lecture. Instructor answers are highlighted with official golden verified badges.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">5</div>
+          <div class="step-body">
+            <h4>Claiming Verifiable Certificate</h4>
+            <p>Upon reaching 100% completion, students unlock their official certificate carrying the instructor's digital signature and unique serial ID.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- iOS Build -->
-    <section id="ios-build">
+    <section id="instructor-usage">
       <div class="section-header">
-        <h2 class="section-title">Build iOS (Apple App Store)</h2>
-        <p class="section-desc">Generate production iOS builds using Xcode or terminal.</p>
+        <h2 class="section-title">Instructor Studio User Journey</h2>
+        <p class="section-desc">Educator tools built specifically to manage courses, students, and payouts.</p>
       </div>
 
-      <div class="code-wrapper">
-        <div class="code-header">
-          <span class="code-lang">Terminal</span>
-          <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <h4>Revenue &amp; Executive Analytics</h4>
+            <p>Educators monitor Total Earnings, Active Students, Total Followers, and 5-Star Ratings with real-time month-over-month growth indicators.</p>
+          </div>
         </div>
-        <pre><code>flutter build ipa --release</code></pre>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <h4>Course Studio &amp; Curriculum Builder</h4>
+            <p>Multi-step wizard allowing instructors to add course metadata, organize chapter modules, upload video lectures, and set free preview flags.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <h4>Q&amp;A Resolution Hub</h4>
+            <p>Filter incoming questions by "Unanswered" to respond quickly with verified official instructor solutions.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-body">
+            <h4>Digital Signature Studio</h4>
+            <p>Instructors register their stylized script font or upload a PNG signature, which is automatically stamped on all student course certificates.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">5</div>
+          <div class="step-body">
+            <h4>Wallet &amp; Payout Requests</h4>
+            <p>Review available balance, track payout history, and submit withdrawal requests via Bank Wire Transfer or PayPal.</p>
+          </div>
+        </div>
       </div>
-      <p>Open <code>build/ios/archive/Runner.xcarchive</code> in Xcode Organizer to validate and upload directly to App Store Connect.</p>
+    </section>
+
+    <section id="certificate-system">
+      <div class="section-header">
+        <h2 class="section-title">Digital Certificate Engine</h2>
+        <p class="section-desc">How the Instructor's digital signature links directly to the Student's course completion certificate.</p>
+      </div>
+
+      <p>
+        The certificate workflow connects both applications seamlessly:
+      </p>
+      <ol style="margin: 12px 0 18px 24px; color: #475569; display: flex; flex-direction: column; gap: 8px;">
+        <li><strong>Instructor Studio:</strong> The teacher sets their digital signature in <strong>Profile &rarr; Digital Signature</strong>.</li>
+        <li><strong>Student App:</strong> The student completes 100% of the lessons in a course.</li>
+        <li><strong>Automatic Generation:</strong> The certificate renders with student name, course title, completion date, verification serial code, and the instructor's stamped signature.</li>
+      </ol>
+    </section>
+
+    <!-- ==================== SECTION 5: PRODUCTION RELEASE & SIGNING ==================== -->
+
+    <section id="android-signing">
+      <div class="section-header">
+        <h2 class="section-title">5. Android Release Signing Configuration</h2>
+        <p class="section-desc">Complete project-specific guide to generate a keystore and configure release signing for both applications.</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <h4>Generate an Upload Keystore</h4>
+            <p>Open terminal and execute the standard Java <code>keytool</code> command to create a private signing keystore:</p>
+            
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">Terminal (macOS / Linux)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload</code></pre>
+            </div>
+
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">PowerShell (Windows)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>keytool -genkey -v -keystore "$env:USERPROFILE\upload-keystore.jks" -keyalg RSA -keysize 2048 -validity 10000 -alias upload</code></pre>
+            </div>
+
+            <p style="margin-top: 8px;">
+              Keep your keystore file, password, and alias safe! Google Play requires this same keystore for all future app updates.
+            </p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <h4>Create android/key.properties</h4>
+            <p>
+              In the <code>android/</code> directory of each app (<code>Student_App/android/key.properties</code> and <code>Instructor_App/android/key.properties</code>), create a new file named <code>key.properties</code> containing your credentials:
+            </p>
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">Properties (android/key.properties)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>storePassword=YourKeystorePasswordHere
+keyPassword=YourKeyPasswordHere
+keyAlias=upload
+storeFile=/Users/yourusername/upload-keystore.jks</code></pre>
+            </div>
+            <p style="font-size: 13px; color: #64748B;">
+              <em>Note for Windows: Use forward slashes in path (e.g. <code>C:/Users/yourname/upload-keystore.jks</code>).</em>
+            </p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <h4>Configure Student_App/android/app/build.gradle (Groovy DSL)</h4>
+            <p>Update <code>Student_App/android/app/build.gradle</code> to load <code>key.properties</code> and bind it to the release buildType:</p>
+
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">Groovy (Student_App/android/app/build.gradle)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>import java.io.FileInputStream
+import java.util.Properties
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    ...
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-body">
+            <h4>Configure Instructor_App/android/app/build.gradle.kts (Kotlin DSL)</h4>
+            <p>Update <code>Instructor_App/android/app/build.gradle.kts</code> with the Kotlin DSL equivalent:</p>
+
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">Kotlin (Instructor_App/android/app/build.gradle.kts)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>import java.io.FileInputStream
+import java.util.Properties
+
+val keystoreProperties = Properties()
+val keystorePropertiesFile = rootProject.file("key.properties")
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    ...
+    signingConfigs {
+        create("release") {
+            keyAlias = keystoreProperties.getProperty("keyAlias")
+            keyPassword = keystoreProperties.getProperty("keyPassword")
+            storeFile = keystoreProperties.getProperty("storeFile")?.let { file(it) }
+            storePassword = keystoreProperties.getProperty("storePassword")
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.getByName("release")
+        }
+    }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Build Android -->
+    <section id="android-build">
+      <div class="section-header">
+        <h2 class="section-title">Build Production Android Binaries</h2>
+        <p class="section-desc">Commands to generate signed AppBundles (.aab) and APKs (.apk).</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <h4>Build Google Play AppBundle (.aab)</h4>
+            <p>Required by Google Play Store for submission:</p>
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>flutter build appbundle --release</code></pre>
+            </div>
+            <p>Output file: <code>build/app/outputs/bundle/release/app-release.aab</code></p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <h4>Build Standalone Release APK (.apk)</h4>
+            <p>Useful for demo testing and alternative distribution:</p>
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>flutter build apk --release</code></pre>
+            </div>
+            <p>Output file: <code>build/app/outputs/flutter-apk/app-release.apk</code></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- iOS Signing & Provisioning -->
+    <section id="ios-signing">
+      <div class="section-header">
+        <h2 class="section-title">iOS Team &amp; Provisioning Profile Setup</h2>
+        <p class="section-desc">Step-by-step Apple Developer configuration inside Xcode.</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <h4>Apple Developer Account &amp; Xcode Login</h4>
+            <p>Ensure you have an active Apple Developer Program membership ($99/year). Open Xcode, navigate to <strong>Xcode &rarr; Settings &rarr; Accounts</strong>, and add your Apple ID.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <h4>Open ios/Runner.xcworkspace</h4>
+            <p>Open the Xcode workspace (<strong>NOT</strong> the <code>.xcodeproj</code> file) in either app:</p>
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">Terminal (macOS)</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>open ios/Runner.xcworkspace</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <h4>Configure Signing &amp; Capabilities</h4>
+            <ol style="margin-left: 20px; color: #475569; display: flex; flex-direction: column; gap: 8px;">
+              <li>In Xcode Project Navigator, click the root <strong>Runner</strong> blue icon.</li>
+              <li>Under <strong>TARGETS</strong>, select <strong>Runner</strong>.</li>
+              <li>Click on the <strong>Signing &amp; Capabilities</strong> tab at the top.</li>
+              <li>Ensure <strong>"Automatically manage signing"</strong> checkbox is checked <code>[x]</code>.</li>
+              <li>In the <strong>Team</strong> dropdown, select your registered Apple Developer Team name.</li>
+              <li>Enter your unique <strong>Bundle Identifier</strong> (e.g. <code>com.yourcompany.skillora</code>).</li>
+              <li>Xcode will automatically generate your Development &amp; Distribution Certificates and Provisioning Profiles!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Build iOS -->
+    <section id="ios-build">
+      <div class="section-header">
+        <h2 class="section-title">Build iOS IPA &amp; Distribute to App Store Connect</h2>
+        <p class="section-desc">Generate production iOS archives and upload to TestFlight.</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <h4>Build Release IPA via Flutter CLI</h4>
+            <div class="code-wrapper">
+              <div class="code-header"><span class="code-lang">Terminal</span><button class="copy-btn" onclick="copyCode(this)">Copy</button></div>
+              <pre><code>flutter build ipa --release</code></pre>
+            </div>
+            <p>Output file: <code>build/ios/archive/Runner.xcarchive</code></p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <h4>Upload via Xcode Organizer</h4>
+            <ol style="margin-left: 20px; color: #475569; display: flex; flex-direction: column; gap: 8px;">
+              <li>In Xcode, select <strong>Window &rarr; Organizer</strong> from the top menu.</li>
+              <li>Select your latest archive from the list.</li>
+              <li>Click the blue <strong>"Distribute App"</strong> button.</li>
+              <li>Select <strong>"App Store Connect"</strong> &rarr; click <strong>Upload</strong>.</li>
+              <li>Xcode validates your build and uploads it directly to App Store Connect / TestFlight for beta testing and review!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Troubleshooting -->
     <section id="troubleshooting">
       <div class="section-header">
         <h2 class="section-title">Troubleshooting &amp; FAQ</h2>
-        <p class="section-desc">Quick solutions to the most common setup questions.</p>
+        <p class="section-desc">Solutions to the most common configuration and compilation queries.</p>
       </div>
 
       <div class="feature-card" style="margin-bottom: 16px;">
-        <h4>Q: Gradle build error: "Unsupported class file major version"</h4>
-        <p><strong>Solution:</strong> Ensure your system is using Java JDK 17. Run <code>java -version</code> to verify. Set <code>JAVA_HOME</code> to JDK 17.</p>
+        <h3>Q: Gradle error: "Unsupported class file major version 65"</h3>
+        <p><strong>Solution:</strong> Ensure your system is using <strong>Java JDK 17</strong>. Run <code>java -version</code> in your terminal. If it shows JDK 21 or higher, install JDK 17 and configure your <code>JAVA_HOME</code> environment variable or set JDK 17 inside Android Studio (Settings &rarr; Build &rarr; Gradle &rarr; Gradle JDK).</p>
       </div>
 
       <div class="feature-card" style="margin-bottom: 16px;">
-        <h4>Q: CocoaPods error on iOS pod install</h4>
-        <p><strong>Solution:</strong> Navigate into <code>ios/</code>, remove <code>Podfile.lock</code> and <code>Pods/</code> folder, then run <code>pod repo update</code> and <code>pod install</code>.</p>
+        <h3>Q: CocoaPods error on iOS: "Podfile: Failed to install"</h3>
+        <p><strong>Solution:</strong> Inside macOS terminal, navigate into <code>ios/</code>, delete <code>Podfile.lock</code> and the <code>Pods/</code> folder, then run:</p>
+        <code>pod repo update &amp;&amp; pod install</code>
       </div>
 
       <div class="feature-card" style="margin-bottom: 16px;">
-        <h4>Q: Are both apps guaranteed to pass flutter analyze?</h4>
-        <p><strong>Solution:</strong> Yes! Both the Student App and the Instructor App pass <code>flutter analyze</code> with <strong>0 errors and 0 warnings</strong>, fully compliant with CodeCanyon and Codester strict quality standards.</p>
+        <h3>Q: How to run flutter analyze?</h3>
+        <p><strong>Solution:</strong> Run <code>flutter analyze</code> in either project directory. Both applications pass with <strong>0 errors and 0 warnings</strong>, compliant with strict marketplace standards.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Q: What if my new icon doesn't update on my test phone?</h3>
+        <p><strong>Solution:</strong> Uninstall the older version of the app from your device/emulator first, run <code>flutter clean</code>, and re-run <code>flutter run</code>. Android and iOS heavily cache launcher icons.</p>
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
       <p>&copy; 2026 Skillora LMS. Built for Elite Marketplace Creators.</p>
-      <p style="margin-top: 6px;">Crafted with Flutter &amp; GetX &bull; High Performance &bull; Zero Runtime Warnings</p>
+      <p style="margin-top: 6px;">Crafted with Flutter &amp; GetX &bull; High Performance &bull; Commercial Grade</p>
     </footer>
 
   </main>
@@ -1320,10 +1893,14 @@ class AppColors {
   <script>
     // Tab switching
     function switchTab(tabId, btn) {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      const parent = btn.closest('.main-content') || document;
+      btn.parentElement.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      document.getElementById(tabId).classList.add('active');
+      const content = document.getElementById(tabId);
+      if (content) {
+        content.parentElement.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        content.classList.add('active');
+      }
     }
 
     // Code copy
